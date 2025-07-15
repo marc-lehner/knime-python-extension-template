@@ -13,9 +13,12 @@ knime-python-base = "*"
 python = "3.9.*"
 knime-extension-bundling = "5.5.*"
 
+[feature.debug.dependencies]
+debugpy = "*"
+
 [feature.build.tasks]
 build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "python ./.pixi/envs/build/bin/build_python_extension.py . {{ dest }}"}
 
 [environments]
 build = {features = ["build"], no-default-feature = true}
-
+debug = {features = ["debug"]}
