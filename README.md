@@ -40,9 +40,12 @@ You can find instructions on how to work with our code or develop python extensi
 2. **Edit** `knime.yml` -  provide your metadata, license, ...
 3. _(Optional)_ Modify the `src/extension.py` file to implement your own logic.
 4. _(Optional)_ Add python packages to the environment with the following command, or by manually editing the `pixi.toml` file:
+
     ```bash
     pixi add <package_name>
     ```
+
+    It is good practice to keep the `pixi.lock` file in this repository and commit the changes to it whenever you add packages or update them with `pixi update`.
 5. **Install** the python environment:
     ```bash
     pixi install
