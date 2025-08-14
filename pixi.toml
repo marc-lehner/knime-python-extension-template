@@ -3,9 +3,11 @@ channels = ["knime", "conda-forge"]
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 
 [tasks]
+test = { cmd = "pytest" }
 
 [dependencies]
 python = "3.11.*"
+pytest = "*"
 knime-extension = "*"
 knime-python-base = "*"
 
